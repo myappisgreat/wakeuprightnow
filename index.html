@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111919"><meta name="description" content="用五題數學喚醒大腦的鬧鐘">
+  <link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg"><link rel="stylesheet" href="style.css">
+  <title>醒醒 Wake Up Right Now</title>
+</head>
+<body>
+<main>
+  <header><a class="brand" href="./"><span class="brand-icon">◷</span> 醒醒<span class="brand-en">WAKE UP RIGHT NOW</span></a><button id="install" class="small" hidden>安裝 App ↗</button></header>
+  <section class="intro"><span class="eyebrow">A LITTLE MATH. A FRESH START.</span><h1>讓大腦，<br>比你先起床<span class="dot">。</span></h1><p>五題數學，把「再睡一下」變成「我醒了」。</p></section>
+  <div class="dashboard">
+    <section class="alarm-card"><div class="card-top"><span class="eyebrow">YOUR NEXT MORNING</span><span id="status" class="badge">尚未設定</span></div><h2>明天，幾點開始？</h2>
+      <form id="alarm-form"><label for="alarm-time">響鈴時間</label><input id="alarm-time" type="time" value="07:00" required><div class="time-note">依照裝置的當地時間</div><button class="primary" type="submit" id="set-alarm">設定鬧鐘 <span>↗</span></button></form>
+      <div id="schedule" class="schedule" aria-live="polite">設定時間，給明天一個清醒的開始。</div>
+      <div class="card-actions"><button id="test" class="text-button">♫ 試響與練習</button><button id="cancel" class="text-button" hidden>取消鬧鐘</button></div>
+    </section>
+    <section class="side"><div class="clock-card"><span class="eyebrow">RIGHT HERE, RIGHT NOW</span><div id="clock">00:00<span>:00</span></div><p id="date"></p><div class="live"><i></i> 現在，就是新的開始</div></div><div class="how"><span class="step-number">05</span><div><h3>答對五題，才能關閉。</h3><p>隨機兩位數加法。<br>答錯不扣分，醒來慢慢算。</p></div></div></section>
+  </div>
+  <aside class="notice"><span>ⓘ</span><p><strong>讓醒醒陪你待著。</strong> 保持 App 開啟、螢幕亮著，並確認裝置音量。背景執行、鎖屏或關閉 App 時，瀏覽器可能無法響鈴。設定後會嘗試保持螢幕喚醒。</p></aside>
+  <footer><span>少一點貪睡，多一點清醒。</span><span>MADE FOR YOUR MORNING ☀</span></footer>
+</main>
+<dialog id="challenge" aria-labelledby="challenge-title"><div class="challenge-inner"><span class="eyebrow">TIME TO WAKE UP</span><h2 id="challenge-title">早安，開動大腦。</h2><p>答對 5 題，鬧鐘就會停止。</p><div id="progress" class="progress"></div><div id="question" class="question"></div><form id="answer-form"><label for="answer">你的答案</label><input id="answer" type="text" inputmode="numeric" autocomplete="off" required placeholder="輸入計算結果"><button type="submit" class="primary">確認答案 →</button></form><p id="feedback" aria-live="polite"></p><button id="resume-audio" class="text-button" hidden>點此恢復鈴聲</button></div></dialog>
+<div id="toast" role="status" hidden></div>
+<script type="module" src="app.js"></script>
+</body></html>
