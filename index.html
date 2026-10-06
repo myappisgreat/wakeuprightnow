@@ -21,7 +21,7 @@
   <aside class="notice"><span>ⓘ</span><p><strong>讓醒醒陪你待著。</strong> 保持 App 開啟、螢幕亮著，並確認裝置音量。背景執行、鎖屏或關閉 App 時，瀏覽器可能無法響鈴。設定後會嘗試保持螢幕喚醒。</p></aside>
   <footer><span>少一點貪睡，多一點清醒。</span><span>MADE FOR YOUR MORNING ☀</span></footer>
 </main>
-<dialog id="challenge" aria-labelledby="challenge-title"><div class="challenge-inner"><span class="eyebrow">TIME TO WAKE UP</span><h2 id="challenge-title">早安，開動大腦。</h2><p>答對 5 題，鬧鐘就會停止。</p><div id="progress" class="progress"></div><div id="question" class="question"></div><form id="answer-form"><label for="answer">你的答案</label><input id="answer" type="text" inputmode="numeric" autocomplete="off" required placeholder="輸入計算結果"><button type="submit" class="primary">確認答案 →</button></form><p id="feedback" aria-live="polite"></p><button id="resume-audio" class="text-button" hidden>點此恢復鈴聲</button></div></dialog>
+<dialog id="challenge" aria-labelledby="challenge-title"><div class="challenge-inner"><span class="eyebrow">TIME TO WAKE UP</span><h2 id="challenge-title">早安，開動大腦。</h2><p>答對 5 題，鬧鐘就會停止。</p><div id="progress" class="progress"></div><div id="question" class="question"></div><form id="answer-form"><label for="answer">你的答案</label><input id="answer" type="text" inputmode="numeric" autocomplete="off" required placeholder="輸入計算結果"><button type="submit" class="primary">確認答案 →</button></form><p id="feedback" aria-live="polite"></p><p id="audio-status" role="status"></p><button id="resume-audio" class="text-button" hidden>點此恢復鈴聲</button></div></dialog>
 <div id="toast" role="status" hidden></div>
 <script type="module" src="app.js"></script>
 </body></html>
